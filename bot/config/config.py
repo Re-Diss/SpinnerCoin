@@ -11,10 +11,10 @@ class Settings(BaseSettings):
     AUTO_UPGRADE: bool = False
     MAX_UPGRADE_LEVEL: int = 1
 
-    APPLY_DAILY_ENERGY: bool = True
-    APPLY_DAILY_TURBO: bool = True
+    APPLY_DAILY_ENERGY: bool = False
+    APPLY_DAILY_TURBO: bool = False
 
-    TAPS_COUNT: list[int] = [5, 7]
+    TAPS_COUNT: list[int] = [20, 25]
 
     USE_PROXY_FROM_FILE: bool = False
 
