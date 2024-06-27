@@ -17,16 +17,16 @@
 | Support tdata / pyrogram .session / telethon .session |     ✅     |
 
 ## [Settings](https://github.com/Re-Diss/SpinnerCoin/blob/main/.env-example)
-| Settings                | Description                                                                |
-|-------------------------|----------------------------------------------------------------------------|
-| **API_ID / API_HASH**   | Platform data from which to launch a Telegram session (stock - Android)    |
-| **ADD_TAPS_ON_TURBO**    | How many taps will be added when turbo is activated (default. [10,15])     |
-| **AUTO_UPGRADE**     | Should I improve the spinner (True / False)                                |
-| **MAX_UPGRADE_LEVEL**     | Max upgrade level                                                          |
-| **APPLY_DAILY_ENERGY**   | Whether to use the daily free energy boost (True / False)                  |
-| **APPLY_DAILY_TURBO**    | Whether to use the daily free turbo boost (True / False)                   |
-| **TAPS_COUNT**  | Number of taps (default. [5, 7]) DO NOT CHANGE                             |
-| **USE_PROXY_FROM_FILE** | Whether to use proxy from the `bot/config/proxies.txt` file (True / False) |
+| Settings                | Description                                                                                                                                                                                                                     |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **API_ID / API_HASH**   | Platform data from which to launch a Telegram session (stock - Android)                                                                                                                                                         |
+| **ADD_TAPS_ON_TURBO**    | How many taps will be added when turbo is activated (default. [10,15])                                                                                                                                                          |
+| **AUTO_UPGRADE**     | Should I improve the spinner (True / False)                                                                                                                                                                                     |
+| **MAX_UPGRADE_LEVEL**     | Max upgrade level                                                                                                                                                                                                               |
+| **APPLY_DAILY_ENERGY**   | Whether to use the daily free energy boost (True / False)                                                                                                                                                                       |
+| **APPLY_DAILY_TURBO**    | Whether to use the daily free turbo boost (True / False)                                                                                                                                                                        |
+| **TAPS_COUNT**  | Number of taps. If the spinner level is below 12, a value from 5 to 7 is applied. If the spinner level is 12 or higher and it is minted as an NFT, the value specified by you is applied, if 12 and not minted then from 5 to 7 |
+| **USE_PROXY_FROM_FILE** | Whether to use proxy from the `bot/config/proxies.txt` file (True / False)                                                                                                                                                      |
 
 ## Installation
 You can download [**Repository**](https://github.com/Re-Diss/SpinnerCoin) by cloning it to your system and installing the necessary dependencies:

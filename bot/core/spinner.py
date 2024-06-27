@@ -296,8 +296,8 @@ class Claimer:
                         await self.open_box(http_client=http_client, tg_web_data=tg_web_data)
 
                     for i in range(spinners_len):
-                        spinner = spinners[i]
-                        spinner_data = spinner
+                        spinner_data = spinners[i]
+                        is_minted = spinner_data["isMinted"]
                         spinner_id = spinner_data["id"]
 
                         if i > 0:
@@ -316,9 +316,12 @@ class Claimer:
                                 is_spinner_broken = spinner_data["isBroken"]
                                 end_repair_time = spinner_data["endRepairTime"]
                                 spinner_level = spinner_data["level"]
-                                number_of_clicks = randint(settings.TAPS_COUNT[0], settings.TAPS_COUNT[1])
+                                number_of_clicks = randint(5, 7)
 
-                                if rockets_amount > 0:
+                                if is_minted:
+                                    number_of_clicks = randint(settings.TAPS_COUNT[0], settings.TAPS_COUNT[1])
+
+                                if rockets_amount > 0 and settings.APPLY_DAILY_TURBO:
                                     await self.rocket_activate(http_client=http_client,
                                                                tg_web_data=tg_web_data,
                                                                spinner_id=spinner_id)
@@ -358,7 +361,7 @@ class Claimer:
                                         balance = init_data["initData"]["user"]["balance"]
                                         full_hp_mount = init_data["initData"]["user"]["fullhpAmount"]
 
-                                        if full_hp_mount > 0:
+                                        if full_hp_mount > 0 and settings.APPLY_DAILY_ENERGY:
                                             await self.full_hp_activate(http_client=http_client,
                                                                         tg_web_data=tg_web_data,
                                                                         spinner_id=spinner_id)
