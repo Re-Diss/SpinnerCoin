@@ -226,7 +226,7 @@ class Claimer:
 
             return True
         except Exception as error:
-            logger.error(f"{self.session_name} | Unknown error when selecting the spinner: {error}")
+            logger.error(f"{self.session_name} | Unknown error when upgrading the spinner: {error}")
             await asyncio.sleep(delay=randint(60, 120))
 
             return False
@@ -373,7 +373,7 @@ class Claimer:
                                         logger.info(
                                             f"{self.session_name} |  Check for updates")
 
-                                        while settings.AUTO_UPGRADE and balance > levels[spinner_level][
+                                        while settings.AUTO_UPGRADE and balance > levels[spinner_level-1][
                                             "price"] and spinner_level < settings.MAX_UPGRADE_LEVEL:
                                             await self.upgrade_spinner(http_client=http_client, tg_web_data=tg_web_data,
                                                                        spinner_id=spinner_id,
